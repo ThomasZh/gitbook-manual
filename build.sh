@@ -1,4 +1,23 @@
 gitbook build
-cd _book/gitbook
-sed 's/if(m)/if(false)/g' theme.js > theme.js.tmp
-mv theme.js.tmp theme.js
+sed 's/if(m)/if(false)/g' _book/gitbook/theme.js > _book/gitbook/theme.js.tmp
+mv _book/gitbook/theme.js.tmp _book/gitbook/theme.js
+
+for file in _book/*.html
+do
+    if test -f $file
+    then
+        echo $file
+        sed 's/\<a href="\.\/">/\<a href=\"index\.html">/g' $file > $file.tmp
+        mv "$file.tmp" $file
+    fi
+done
+
+for file in _book/*.html
+do
+    if test -f $file
+    then
+        echo $file
+        sed 's/data-path="\.\/"/data-path="index\.html"/g' $file > $file.tmp
+        mv "$file.tmp" $file
+    fi
+done 
