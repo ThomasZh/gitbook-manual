@@ -25,6 +25,9 @@ gitbook serve
 上述命令默认将生成的静态网站输出到 _book 目录。
 ```
 
+## [Demo](https://thomaszh.github.io/gitbook-manual)
+
+
 GitBook
 =======
 
