@@ -14,8 +14,9 @@ GitBook 是目前最流行的开源书籍写作方案，可以把Markdown 文件
 
 ## Install
 ```
-npm install -g gitbook-cli
+nvm install 10
 nvm use 10
+npm install -g gitbook-cli
 gitbook install
 
 gitbook serve

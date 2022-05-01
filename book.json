@@ -5,6 +5,7 @@
     "language": "zh-hans",
     "root": ".",
     "plugins": [
+        "github",
         "ace",
         "theme-comscore",
         "edit-link",
@@ -30,6 +31,9 @@
         "epub": "styles/epub.css"
     },
     "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/ThomasZh/gitbook-manual"
+        },
         "edit-link": {
             "base": "https://github.com/ThomasZh/gitbook-manual/blob/main/",
             "label": "Edit This Page"
